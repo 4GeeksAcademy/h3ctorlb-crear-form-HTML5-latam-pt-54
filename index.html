@@ -11,10 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
+    />
 
     <style>
       body {
@@ -27,6 +28,10 @@
         padding: 2rem;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-check-input:checked + .form-check-label {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -102,13 +107,58 @@
           </div>
 
           <div class="mb-3">
-            <label>We accept:</label><br />
-            <i class="fab fa-cc-mastercard fa-2x me-2"></i>
-            <i class="fab fa-cc-visa fa-2x me-2"></i>
-            <i class="fab fa-cc-amex fa-2x me-2"></i>
-            <i class="fab fa-cc-discover fa-2x"></i>
+            <label class="form-label">We accept:</label>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="cardType"
+                id="mastercard"
+                value="mastercard"
+              />
+              <label class="form-check-label" for="mastercard">
+                <i class="fab fa-cc-mastercard fa-lg me-1"></i>Mastercard
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="cardType"
+                id="visa"
+                value="visa"
+              />
+              <label class="form-check-label" for="visa">
+                <i class="fab fa-cc-visa fa-lg me-1"></i>Visa
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="cardType"
+                id="amex"
+                value="amex"
+              />
+              <label class="form-check-label" for="amex">
+                <i class="fab fa-cc-amex fa-lg me-1"></i>Amex
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="cardType"
+                id="discover"
+                value="discover"
+              />
+              <label class="form-check-label" for="discover">
+                <i class="fab fa-cc-discover fa-lg me-1"></i>Discover
+              </label>
+            </div>
           </div>
 
+          <!-- ...continúa con textarea y botones... -->
           <div class="mb-3">
             <label>Message</label>
             <textarea
